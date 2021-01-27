@@ -1,13 +1,15 @@
 import React from 'react';
-import {Image} from 'react-native';
+import {Image, View} from 'react-native';
 import profilePictureStyle from './style';
 
 const ProfilePicture = () => (
-  <Image
-    style={profilePictureStyle.image}
-    source={{
-      uri: 'https://reactnative.dev/img/tiny_logo.png',
-    }}
-  />
+  <View style={profilePictureStyle.imageContainer}>
+    <Image
+      style={profilePictureStyle.image}
+      source={{
+        uri: 'https://reactnative.dev/img/tiny_logo.png',
+      }}
+    />
+  </View>
 );
 export default ProfilePicture;
