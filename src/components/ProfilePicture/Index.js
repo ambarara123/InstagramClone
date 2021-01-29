@@ -12,4 +12,5 @@ const ProfilePicture = ({uri}) => (
     />
   </View>
 );
+
 export default ProfilePicture;
