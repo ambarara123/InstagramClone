@@ -1,11 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import ProfilePicture from '../ProfilePicture';
+import styles from './style';
+import ProfilePicture from '../ProfilePicture/Index';
 
 const Story = ({imageUri, name}) => (
   <View>
     <ProfilePicture uri={imageUri} />
-    <Text>{name}</Text>
+    <Text style={styles.name}>{name}</Text>
   </View>
 );
 

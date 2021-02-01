@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {FlatList} from 'react-native';
 import Story from '../story/Story';
 
 const data = [
@@ -19,15 +19,20 @@ const data = [
     imageUri: 'https://reactnative.dev/img/tiny_logo.png',
     name: 'fourth',
   },
+  {
+    imageUri: 'https://reactnative.dev/img/tiny_logo.png',
+    name: 'fifth',
+  },
 ];
 
 const Stories = () => (
-  <View>
-    <Story imageUri={data[0].imageUri} name={data[0].name} />
-    <Story imageUri={data[1].imageUri} name={data[1].name} />
-    <Story imageUri={data[2].imageUri} name={data[2].name} />
-    <Story imageUri={data[3].imageUri} name={data[3].name} />
-  </View>
+  <FlatList
+    data={data}
+    keyExtractor={({name}) => name}
+    horizontal
+    showsHorizontalScrollIndicator={false}
+    renderItem={({item}) => <Story imageUri={item.imageUri} name={item.name} />}
+  />
 );
 
 export default Stories;

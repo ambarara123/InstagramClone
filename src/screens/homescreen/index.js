@@ -1,11 +1,9 @@
 import React from 'react';
-import {Text} from 'react-native';
-import Stories from '../../components/stories/Stories';
+import Feed from '../../components/feed/Feed';
 
 const HomeScreen = () => (
   <>
-    <Text>Hello World</Text>
-    <Stories />
+    <Feed />
   </>
 );
 export default HomeScreen;
